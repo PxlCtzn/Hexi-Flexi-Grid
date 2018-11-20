@@ -1,7 +1,7 @@
 {
 	"name" : "PxlCtzn/hexi-flexi-grid",
 	"description" : "Hexi-flexi-grid Integration for PxlCtzn Website",
-	"type" : "symfony-bundle",
+	"type" : "library",
 	"license" : "MIT",
 	"minimum-stability" : "dev",
 	"require" : {
