@@ -1,5 +1,5 @@
 <?php
-namespace PxlCtzn\HexiFlexiGrid\Scripts;
+namespace PxlCtzn\HexiFlexiGrid\Composer;
 
 use Composer\Plugin\PluginInterface;
 use Composer\Composer;
