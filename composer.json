@@ -1,14 +1,32 @@
 {
 	"name" : "pxlctzn/hexi-flexi-grid",
 	"description" : "Hexi-flexi-grid Integration for PxlCtzn Website",
-	"type" : "library",
+	"type" : "composer-plugin",
 	"license" : "MIT",
-	"minimum-stability" : "dev",
-	"require" : {
-		"composer/installers" : "~1.6"
-	},
 	"keywords" : [
 		"PxlCtzn",
 		"Hexi-flexi-grid"
-	]
+	],
+	"require" : {
+		"php" : "^7.1.0",
+		"composer-plugin-api" : "^1.0.0"
+	},
+	"require-dev" : {
+		"composer/composer": "^1.8@dev"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"PxlCtzn\\HexiFlexiGrid\\" : "src/"
+		}
+	},
+	"extra" : {
+		"class" : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer",
+		"installer-paths" : {
+			"public/hexi-flexi-grid" : "pxlctzn/hexi-flexi-grid"
+		}
+	},
+	"scripts" : {
+		"post-update-cmd"  : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer::copyAsset",
+		"post-install-cmd" : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer::copyAsset"
+	}
 }
