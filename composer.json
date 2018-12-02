@@ -12,7 +12,7 @@
 		"composer-plugin-api" : "^1.0.0"
 	},
 	"require-dev" : {
-		"composer/composer": "^1.8@dev"
+		"composer/composer" : "^1.8@dev"
 	},
 	"autoload" : {
 		"psr-4" : {
@@ -26,7 +26,7 @@
 		}
 	},
 	"scripts" : {
-		"post-update-cmd"  : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer::copyAsset",
+		"post-update-cmd" : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer::copyAsset",
 		"post-install-cmd" : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer::copyAsset"
 	}
 }
