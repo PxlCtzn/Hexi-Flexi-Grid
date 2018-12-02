@@ -20,10 +20,7 @@
 		}
 	},
 	"extra" : {
-		"class" : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer",
-		"installer-paths" : {
-			"public/scss/modules/hexi-flexi-grid" : "pxlctzn/hexi-flexi-grid"
-		}
+		"class" : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer"
 	},
 	"scripts" : {
 		"post-update-cmd" : "PxlCtzn\\HexiFlexiGrid\\Composer\\Installer::copyAsset",
