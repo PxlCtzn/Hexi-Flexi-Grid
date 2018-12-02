@@ -57,17 +57,14 @@ final class Installer implements PluginInterface, EventSubscriberInterface
      */
     public static function copyAsset(Event $event)
     {
-        if(self::$package->getName() === self::PACKAGE_NAME)
-            return false;
-
         self::$package  = $event->getComposer()->getPackage();
         self::$composer = $event->getComposer();
         self::$io       = $event->getIO();
 
         self::$outputDirectory = getcwd().DIRECTORY_SEPARATOR.self::getAssetInstallPath();
-        self::copyAssetIntoInstallPath();
-
-        return false;
+        if(self::$package->getName() !== self::PACKAGE_NAME) {
+            self::copyAssetIntoInstallPath();
+        }
     }
 
 
@@ -187,4 +184,3 @@ final class Installer implements PluginInterface, EventSubscriberInterface
         return true;
     }
 }
-
